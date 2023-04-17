@@ -35,6 +35,14 @@ io.on('connection', (client) => {
 app.get('/', (req, res)=>{
     res.end();
 })
+app.get('/users', (req, res)=>{
+  res.json([
+    {
+      'name': 'Jesus',
+      'apellido': 'Paguay'
+    }
+  ]);
+})
 
 // Iniciar servidor HTTP
 const PORT = process.env.PORT || 4000; // Puerto en el que se ejecutará el servidor
